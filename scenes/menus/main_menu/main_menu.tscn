@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cd34ulb1ljvc5"]
+
+[ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_peecx"]
+[ext_resource type="Script" uid="uid://u3hoafvcejmm" path="res://scenes/menus/main_menu/main_menu.gd" id="2_ub2bi"]
+[ext_resource type="PackedScene" uid="uid://b8doiervc4q6d" path="res://scenes/windows/main_menu_options_window.tscn" id="3_x31ro"]
+[ext_resource type="PackedScene" uid="uid://bu5rg6scbsyqs" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_0jpat"]
+[ext_resource type="Texture2D" uid="uid://6m6kascucx0v" path="res://Images/Checkered bg.png" id="5_ub2bi"]
+[ext_resource type="Shader" uid="uid://s4cjd1r6i20s" path="res://scenes/menus/main_menu/Scroll.gdshader" id="5_x31ro"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0jpat"]
+shader = ExtResource("5_x31ro")
+shader_parameter/speed = 0.05
+
+[node name="MainMenu" unique_id=282289354 instance=ExtResource("1_peecx")]
+script = ExtResource("2_ub2bi")
+game_scene_path = "uid://dvm2ayic7xg08"
+options_packed_scene = ExtResource("3_x31ro")
+credits_packed_scene = ExtResource("4_0jpat")
+metadata/_edit_lock_ = true
+
+[node name="BackgroundTextureRect" parent="." index="0" unique_id=1025367827]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_0jpat")
+offset_left = -86.0
+offset_top = -434.0
+offset_right = 96.0
+offset_bottom = 489.0
+texture = ExtResource("5_ub2bi")
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" parent_id_path=PackedInt32Array(704939549) index="0" unique_id=334107926]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -515.0
+offset_top = -432.0
+offset_right = 571.0
+offset_bottom = -256.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "AutoSim3D "
+
+[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" parent_id_path=PackedInt32Array(523889664) index="0" unique_id=754291424]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -292.0
+offset_right = 233.0
+offset_bottom = -258.0
+grow_vertical = 2
+
+[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" parent_id_path=PackedInt32Array(580041505) index="0" unique_id=1691719897]
+offset_left = -244.0
+offset_top = -175.0
+offset_right = 233.0
+offset_bottom = 273.0
+
+[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0" unique_id=1434444510]
+custom_minimum_size = Vector2(100, 100)
+theme_override_font_sizes/font_size = 35
+text = "Start"
+
+[node name="OptionsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1" unique_id=1028226159]
+custom_minimum_size = Vector2(100, 100)
+theme_override_font_sizes/font_size = 35
+
+[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2" unique_id=1695433230]
+custom_minimum_size = Vector2(100, 100)
+theme_override_font_sizes/font_size = 35
+
+[node name="ExitButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="3" unique_id=1226331361]
+custom_minimum_size = Vector2(100, 100)
+theme_override_font_sizes/font_size = 35
+
+[node name="VersionLabel" parent="VersionMargin/VersionContainer" parent_id_path=PackedInt32Array(645412385) index="0" unique_id=321873498]
+offset_top = -58.0
+offset_bottom = -32.0
+text = "v1.3"

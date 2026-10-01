@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://dpo1qvylb724h"]
+
+[ext_resource type="Script" uid="uid://kr2cgaf8qmd3" path="res://scenes/quiz/toyota_quizresult.gd" id="1_h7tvj"]
+
+[node name="ToyotaQuizresult" type="Control" unique_id=1791809664]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h7tvj")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1396637660]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0627451, 0.09411765, 0.15294118, 1)
+
+[node name="SafeMargin" type="MarginContainer" parent="." unique_id=1408538076]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 16
+
+[node name="MainVBox" type="VBoxContainer" parent="SafeMargin" unique_id=1663161541]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Header" type="HBoxContainer" parent="SafeMargin/MainVBox" unique_id=34594583]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+
+[node name="HeaderTitle" type="Label" parent="SafeMargin/MainVBox/Header" unique_id=237896024]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 28
+text = "TOYOTA 7K"
+
+[node name="ResultTitle" type="Label" parent="SafeMargin/MainVBox" unique_id=1234061944]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "QUIZ COMPLETED!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResultSubTitle" type="Label" parent="SafeMargin/MainVBox" unique_id=32984283]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Here is the result"
+horizontal_alignment = 1
+
+[node name="ResultCards" type="HBoxContainer" parent="SafeMargin/MainVBox" unique_id=1780795615]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="ScorePanel" type="PanelContainer" parent="SafeMargin/MainVBox/ResultCards" unique_id=726982868]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SafeMargin/MainVBox/ResultCards/ScorePanel" unique_id=1951593505]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ScoreTitle" type="Label" parent="SafeMargin/MainVBox/ResultCards/ScorePanel/VBoxContainer" unique_id=477603870]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+text = "Score"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="SafeMargin/MainVBox/ResultCards/ScorePanel/VBoxContainer" unique_id=2097815138]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "8/15"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="PercentagePanel" type="PanelContainer" parent="SafeMargin/MainVBox/ResultCards" unique_id=1090925365]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SafeMargin/MainVBox/ResultCards/PercentagePanel" unique_id=796467791]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="PercentageTitle" type="Label" parent="SafeMargin/MainVBox/ResultCards/PercentagePanel/VBoxContainer" unique_id=1365747320]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "Percentage"
+horizontal_alignment = 1
+
+[node name="PercentageLabel" type="Label" parent="SafeMargin/MainVBox/ResultCards/PercentagePanel/VBoxContainer" unique_id=1287514917]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "Percentage"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PerformPanel" type="PanelContainer" parent="SafeMargin/MainVBox/ResultCards" unique_id=903346313]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SafeMargin/MainVBox/ResultCards/PerformPanel" unique_id=986484521]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="PerformTitle" type="Label" parent="SafeMargin/MainVBox/ResultCards/PerformPanel/VBoxContainer" unique_id=1867290238]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "Performance"
+horizontal_alignment = 1
+
+[node name="PerformLabel" type="Label" parent="SafeMargin/MainVBox/ResultCards/PerformPanel/VBoxContainer" unique_id=609169456]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Performance"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HomeButton" type="Button" parent="SafeMargin/MainVBox" unique_id=2014646141]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(260, 65)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "BACK TO HOME
+"
+
+[node name="SaveScoreRequest" type="HTTPRequest" parent="." unique_id=1818230073]
+
+[connection signal="pressed" from="SafeMargin/MainVBox/HomeButton" to="." method="_on_home_button_pressed"]

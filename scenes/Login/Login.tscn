@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://dvm2ayic7xg08"]
+
+[ext_resource type="Script" uid="uid://bk2k4huyos1m4" path="res://scenes/Login/Login.gd" id="1_c7tug"]
+[ext_resource type="Shader" uid="uid://s4cjd1r6i20s" path="res://scenes/menus/main_menu/Scroll.gdshader" id="2_pdnjt"]
+[ext_resource type="Texture2D" uid="uid://6m6kascucx0v" path="res://Images/Checkered bg.png" id="3_x0lsi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2t8yw"]
+shader = ExtResource("2_pdnjt")
+shader_parameter/speed = 0.05
+
+[node name="Login" type="Control" unique_id=289611970]
+custom_minimum_size = Vector2(140, 35)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_c7tug")
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="." unique_id=25238240]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_2t8yw")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -431.0
+offset_top = -819.0
+offset_right = 380.0
+offset_bottom = 814.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_x0lsi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="ColorRect" parent="." unique_id=372256434]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -406.0
+offset_top = -151.0
+offset_right = 388.0
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1756306354]
+custom_minimum_size = Vector2(100, 35)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LoginPanel" type="PanelContainer" parent="CenterContainer" unique_id=1270591664]
+custom_minimum_size = Vector2(820, 520)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/LoginPanel" unique_id=823665450]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/LoginPanel/MarginContainer" unique_id=1048433475]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer" unique_id=1514603780]
+layout_mode = 2
+text = "AutoSim3D"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer" unique_id=395698066]
+layout_mode = 2
+text = "Login Here
+"
+horizontal_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer" unique_id=331049780]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="LRNLabel" type="Label" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer" unique_id=24984169]
+layout_mode = 2
+text = "LRN"
+
+[node name="LRNInput" type="LineEdit" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer" unique_id=1695267963]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+placeholder_text = "Enter your LRN "
+
+[node name="PasswordLabel" type="Label" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer" unique_id=220549883]
+layout_mode = 2
+text = "Password"
+
+[node name="PasswordRow" type="HBoxContainer" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer" unique_id=1140669820]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="PasswordField" type="Control" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer/PasswordRow" unique_id=1830406506]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="PasswordInput" type="LineEdit" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer/PasswordRow/PasswordField" unique_id=1637882524]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(191, 16)
+placeholder_text = "Enter your Password"
+secret = true
+
+[node name="PasswordToggleButton" type="Button" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer/PasswordRow/PasswordField" unique_id=2103337593]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_bottom = 42.0
+grow_horizontal = 0
+text = "👁"
+
+[node name="LoginButton" type="Button" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer" unique_id=1062731206]
+custom_minimum_size = Vector2(140, 42)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Login"
+
+[node name="SignupRow" type="HBoxContainer" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer" unique_id=1997115586]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="AccountText" type="Label" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer/SignupRow" unique_id=186956978]
+layout_mode = 2
+text = "Don't have an account?"
+
+[node name="SignupButton" type="Button" parent="CenterContainer/LoginPanel/MarginContainer/VBoxContainer/SignupRow" unique_id=1856763031]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Sign Up"
+flat = true

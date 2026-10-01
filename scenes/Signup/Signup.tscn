@@ -1,0 +1,244 @@
+[gd_scene format=3 uid="uid://bsvt61ygw40yj"]
+
+[ext_resource type="Script" uid="uid://caream1tfpj47" path="res://scenes/Signup/Signup.gd" id="1_e6m23"]
+[ext_resource type="Shader" uid="uid://s4cjd1r6i20s" path="res://scenes/menus/main_menu/Scroll.gdshader" id="2_85set"]
+[ext_resource type="Texture2D" uid="uid://6m6kascucx0v" path="res://Images/Checkered bg.png" id="3_ogkkh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_omq6h"]
+shader = ExtResource("2_85set")
+shader_parameter/speed = 0.05
+
+[node name="Signup" type="Control" unique_id=1744900345]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_e6m23")
+metadata/_edit_horizontal_guides_ = [-21793.0]
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="." unique_id=905322512]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_omq6h")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -431.0
+offset_top = -819.0
+offset_right = 380.0
+offset_bottom = 814.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ogkkh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="ColorRect" parent="." unique_id=245377505]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -422.0
+offset_top = -225.0
+offset_right = 372.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1805693838]
+custom_minimum_size = Vector2(100, 35)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SignupPanel" type="PanelContainer" parent="CenterContainer" unique_id=668473699]
+custom_minimum_size = Vector2(820, 520)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/SignupPanel" unique_id=1614343371]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/SignupPanel/MarginContainer" unique_id=291334912]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer" unique_id=80072967]
+layout_mode = 2
+text = "AutoSim3D"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer" unique_id=839098681]
+layout_mode = 2
+text = "Create Account"
+horizontal_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer" unique_id=1990303289]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="FormColumns" type="HBoxContainer" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer" unique_id=911834791]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="LeftColumn" type="VBoxContainer" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns" unique_id=928855635]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="FullNameLabel" type="Label" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/LeftColumn" unique_id=267550616]
+layout_mode = 2
+text = "Full Name"
+
+[node name="FullNameInput" type="LineEdit" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/LeftColumn" unique_id=861513183]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+placeholder_text = "Enter your Full Name"
+
+[node name="LRNLabel" type="Label" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/LeftColumn" unique_id=414952152]
+layout_mode = 2
+text = "LRN"
+
+[node name="LRNInput" type="LineEdit" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/LeftColumn" unique_id=1693924839]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+placeholder_text = "Enter your LRN"
+
+[node name="YearSectionLabel" type="Label" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/LeftColumn" unique_id=1323654005]
+layout_mode = 2
+text = "Year & Section"
+
+[node name="YearSectionInput" type="OptionButton" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/LeftColumn" unique_id=30094437]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+item_count = 5
+popup/item_0/text = "Grade 11 - Section A"
+popup/item_0/id = 0
+popup/item_1/text = "Grade 11- Section B"
+popup/item_1/id = 1
+popup/item_2/text = "Grade 11 - Section C"
+popup/item_2/id = 2
+popup/item_3/text = "Grade 12 - Section A"
+popup/item_3/id = 3
+popup/item_4/text = "Grade 12 - Section B"
+popup/item_4/id = 4
+
+[node name="RightColumn" type="VBoxContainer" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns" unique_id=402872462]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="PasswordLabel" type="Label" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/RightColumn" unique_id=1542609119]
+layout_mode = 2
+text = "Password"
+
+[node name="PasswordRow" type="HBoxContainer" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/RightColumn" unique_id=459562838]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="PasswordField" type="Control" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/RightColumn/PasswordRow" unique_id=1355664023]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="PasswordInput" type="LineEdit" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/RightColumn/PasswordRow/PasswordField" unique_id=1844063192]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+placeholder_text = "Enter  your Password"
+secret = true
+
+[node name="PasswordToggleButton" type="Button" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/RightColumn/PasswordRow/PasswordField" unique_id=836089032]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_bottom = 42.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "👁"
+
+[node name="ConfirmPasswordLabel" type="Label" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/RightColumn" unique_id=1085846160]
+layout_mode = 2
+text = "Confirm Password"
+
+[node name="ConfirmPasswordRow" type="HBoxContainer" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/RightColumn" unique_id=1558716415]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ConfirmPasswordField" type="Control" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/RightColumn/ConfirmPasswordRow" unique_id=455133497]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="ConfirmPasswordInput" type="LineEdit" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/RightColumn/ConfirmPasswordRow/ConfirmPasswordField" unique_id=1165296453]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+placeholder_text = "Confirm your Password"
+secret = true
+
+[node name="CPToggleButton" type="Button" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/FormColumns/RightColumn/ConfirmPasswordRow/ConfirmPasswordField" unique_id=1329549693]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_bottom = 42.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "👁"
+
+[node name="SignupButton" type="Button" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer" unique_id=1013781174]
+custom_minimum_size = Vector2(100, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Sign Up"
+
+[node name="LoginRow" type="HBoxContainer" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer" unique_id=1143191023]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="AccountText" type="Label" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/LoginRow" unique_id=781248061]
+layout_mode = 2
+text = "Already have an account?"
+
+[node name="LoginButton" type="Button" parent="CenterContainer/SignupPanel/MarginContainer/VBoxContainer/LoginRow" unique_id=254891957]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Login"
+flat = true

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dtbwx2fr8mw1m"]
+
+[node name="PauseMenu" type="Control" unique_id=852873079]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=73676149]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1540874825]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -297.02805
+offset_right = 230.0
+offset_bottom = 297.02808
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1154181121]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=69182652]
+layout_mode = 2
+theme_override_constants/separation = 41
+alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1228345071]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+text = "resume"
+
+[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=376874932]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+text = "Switch Engine"
+
+[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1703901821]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_type_variation = &"GreenButton"
+text = "Tutorial"
+
+[node name="Button4" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1381134206]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+text = "home"
+
+[node name="Button5" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=387293817]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_type_variation = &"FlatButton"
+text = "Exit"
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1423029313]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 209.0
+offset_top = -308.0
+offset_right = 241.0
+offset_bottom = -276.0
+grow_horizontal = 2
+grow_vertical = 2

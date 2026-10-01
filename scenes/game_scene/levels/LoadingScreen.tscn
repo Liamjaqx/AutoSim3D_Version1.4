@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bgxti7pamtbj"]
+
+[ext_resource type="Script" uid="uid://c6a5lkug0dly2" path="res://scenes/game_scene/levels/loading_screen.gd" id="1_v4xod"]
+[ext_resource type="Shader" uid="uid://s4cjd1r6i20s" path="res://scenes/menus/main_menu/Scroll.gdshader" id="2_3lq5b"]
+[ext_resource type="Texture2D" uid="uid://6m6kascucx0v" path="res://Images/Checkered bg.png" id="3_uk2x0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_da2yu"]
+shader = ExtResource("2_3lq5b")
+shader_parameter/speed = 0.05
+
+[node name="LoadingScreen" type="Control" unique_id=441608622 node_paths=PackedStringArray("progress_bar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4xod")
+progress_bar = NodePath("ProgressBar")
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="." unique_id=1227185460]
+visible = false
+texture_repeat = 2
+material = SubResource("ShaderMaterial_da2yu")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -373.0
+offset_top = -819.0
+offset_right = 438.0
+offset_bottom = 814.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_uk2x0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=1729553247]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -258.0
+offset_top = -185.0
+offset_right = 375.0
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=883681435]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -23.0
+offset_right = 193.5
+offset_bottom = 25.709656
+grow_horizontal = 2
+grow_vertical = 2

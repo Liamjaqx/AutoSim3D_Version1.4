@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dern3c5vsgtx"]
+
+[ext_resource type="PackedScene" uid="uid://dnj5f0hsg4d52" path="res://ToyotaPointer/Scenes/Core Scene/toyota_7k.tscn" id="1_ygc8r"]
+
+[node name="EngineRoot" type="Node3D" unique_id=926998280]
+
+[node name="Toyota7K" parent="." unique_id=977308624 instance=ExtResource("1_ygc8r")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=646629273]
+transform = Transform3D(-0.096532635, -0.74551845, 0.6594571, 0, 0.66255134, 0.7490165, -0.9953298, 0.07230454, -0.063957825, 2.097716, 5.4952397, -0.33553588)

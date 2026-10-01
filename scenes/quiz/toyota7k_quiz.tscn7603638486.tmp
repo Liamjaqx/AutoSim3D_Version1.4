@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://b500hgmrpkcte"]
+
+[ext_resource type="Script" uid="uid://cg6jptgkiagva" path="res://scenes/quiz/toyota_7k_quiz.gd" id="1_62lkd"]
+
+[node name="Toyota7kquiz" type="Control" unique_id=1740190057]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_62lkd")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1263935215]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0627451, 0.09411765, 0.15294118, 1)
+
+[node name="SafeMargin" type="MarginContainer" parent="." unique_id=2086506716]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 16
+
+[node name="MainVBox" type="VBoxContainer" parent="SafeMargin" unique_id=1517828098]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="SafeMargin/MainVBox" unique_id=1360829999]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeaderTitle" type="Label" parent="SafeMargin/MainVBox/Header" unique_id=1730023870]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+text = "
+Toyota 7K Quiz
+"
+
+[node name="HeaderSpacer" type="Control" parent="SafeMargin/MainVBox/Header" unique_id=615932439]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimerPanel" type="PanelContainer" parent="SafeMargin/MainVBox/Header" unique_id=441261342]
+custom_minimum_size = Vector2(110, 48)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TimerLabel" type="Label" parent="SafeMargin/MainVBox/Header/TimerPanel" unique_id=668527418]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="QuizProgress" type="ProgressBar" parent="SafeMargin/MainVBox" unique_id=1641371701]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 0.0
+
+[node name="QuizBody" type="HBoxContainer" parent="SafeMargin/MainVBox" unique_id=920409180]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="QuestionPanel" type="PanelContainer" parent="SafeMargin/MainVBox/QuizBody" unique_id=1639547548]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.9
+
+[node name="QuestionVBox" type="VBoxContainer" parent="SafeMargin/MainVBox/QuizBody/QuestionPanel" unique_id=858145860]
+layout_mode = 2
+
+[node name="QuestionNumber" type="Label" parent="SafeMargin/MainVBox/QuizBody/QuestionPanel/QuestionVBox" unique_id=539563456]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="QuestionImage" type="TextureRect" parent="SafeMargin/MainVBox/QuizBody/QuestionPanel/QuestionVBox" unique_id=1254608013]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+expand_mode = 3
+stretch_mode = 5
+
+[node name="QuestionText" type="Label" parent="SafeMargin/MainVBox/QuizBody/QuestionPanel/QuestionVBox" unique_id=1468950991]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 2
+
+[node name="AnswerPanel" type="PanelContainer" parent="SafeMargin/MainVBox/QuizBody" unique_id=1149870902]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+
+[node name="AnswerVBox" type="VBoxContainer" parent="SafeMargin/MainVBox/QuizBody/AnswerPanel" unique_id=820351428]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="AnswerTitle" type="Label" parent="SafeMargin/MainVBox/QuizBody/AnswerPanel/AnswerVBox" unique_id=967431456]
+layout_mode = 2
+
+[node name="AnswerA" type="Button" parent="SafeMargin/MainVBox/QuizBody/AnswerPanel/AnswerVBox" unique_id=1793317986]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+alignment = 0
+autowrap_mode = 2
+clip_text = true
+
+[node name="AnswerB" type="Button" parent="SafeMargin/MainVBox/QuizBody/AnswerPanel/AnswerVBox" unique_id=1420879093]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+alignment = 0
+autowrap_mode = 2
+clip_text = true
+
+[node name="AnswerC" type="Button" parent="SafeMargin/MainVBox/QuizBody/AnswerPanel/AnswerVBox" unique_id=807620267]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+alignment = 0
+autowrap_mode = 2
+clip_text = true
+
+[node name="AnswerD" type="Button" parent="SafeMargin/MainVBox/QuizBody/AnswerPanel/AnswerVBox" unique_id=1523985273]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+alignment = 0
+autowrap_mode = 2
+clip_text = true
+
+[node name="BottonBar" type="HBoxContainer" parent="SafeMargin/MainVBox" unique_id=1488591403]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="QuestionCount" type="Label" parent="SafeMargin/MainVBox/BottonBar" unique_id=1014174584]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BottomSpacer" type="Control" parent="SafeMargin/MainVBox/BottonBar" unique_id=244260516]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NextButton" type="Button" parent="SafeMargin/MainVBox/BottonBar" unique_id=1245417336]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 48)
+layout_mode = 2
+text = "Submit →"

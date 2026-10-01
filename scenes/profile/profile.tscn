@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://d16cdx7sxju34"]
+
+[ext_resource type="Script" uid="uid://8es35joitd3t" path="res://scenes/profile/profile.gd" id="1_uki14"]
+[ext_resource type="Texture2D" uid="uid://dl58q0yeajt4o" path="res://Images/autosim.png" id="2_lyfiv"]
+
+[node name="Profile" type="Control" unique_id=1770000811]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0101964, 1)
+script = ExtResource("1_uki14")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1024845603]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+horizontal_scroll_mode = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer" unique_id=122144116]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ContentVBox" type="VBoxContainer" parent="ScrollContainer/CenterContainer" unique_id=804842250]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="MyProfileTitle" type="Label" parent="ScrollContainer/CenterContainer/ContentVBox" unique_id=1519294822]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 28
+text = "My Profile
+"
+horizontal_alignment = 1
+
+[node name="ProfilePicCenter" type="CenterContainer" parent="ScrollContainer/CenterContainer/ContentVBox" unique_id=1761635360]
+layout_mode = 2
+
+[node name="ProfilePicture" type="TextureRect" parent="ScrollContainer/CenterContainer/ContentVBox/ProfilePicCenter" unique_id=1773436996]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+texture = ExtResource("2_lyfiv")
+stretch_mode = 5
+
+[node name="PersonalInfoPanel" type="PanelContainer" parent="ScrollContainer/CenterContainer/ContentVBox" unique_id=1403891313]
+custom_minimum_size = Vector2(0, 190)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PersonalInfoMargin" type="MarginContainer" parent="ScrollContainer/CenterContainer/ContentVBox/PersonalInfoPanel" unique_id=1514612259]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="PersonalInfoVBox" type="VBoxContainer" parent="ScrollContainer/CenterContainer/ContentVBox/PersonalInfoPanel/PersonalInfoMargin" unique_id=1668049266]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="PersonalInfoTitle" type="Label" parent="ScrollContainer/CenterContainer/ContentVBox/PersonalInfoPanel/PersonalInfoMargin/PersonalInfoVBox" unique_id=632329123]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 22
+text = "Personal Information
+"
+
+[node name="FullNameLabel" type="Label" parent="ScrollContainer/CenterContainer/ContentVBox/PersonalInfoPanel/PersonalInfoMargin/PersonalInfoVBox" unique_id=1755616855]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 18
+text = "Full Name"
+
+[node name="FullNameValue" type="Label" parent="ScrollContainer/CenterContainer/ContentVBox/PersonalInfoPanel/PersonalInfoMargin/PersonalInfoVBox" unique_id=1464836113]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="YearSectionLabel" type="Label" parent="ScrollContainer/CenterContainer/ContentVBox/PersonalInfoPanel/PersonalInfoMargin/PersonalInfoVBox" unique_id=164092019]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 18
+text = "Year & Section"
+
+[node name="YearSectionValue" type="Label" parent="ScrollContainer/CenterContainer/ContentVBox/PersonalInfoPanel/PersonalInfoMargin/PersonalInfoVBox" unique_id=1359698922]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="LRNLabel" type="Label" parent="ScrollContainer/CenterContainer/ContentVBox/PersonalInfoPanel/PersonalInfoMargin/PersonalInfoVBox" unique_id=679604385]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 18
+text = "LRN"
+
+[node name="LRNValue" type="Label" parent="ScrollContainer/CenterContainer/ContentVBox/PersonalInfoPanel/PersonalInfoMargin/PersonalInfoVBox" unique_id=1514696332]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="ChangePassPanel" type="PanelContainer" parent="ScrollContainer/CenterContainer/ContentVBox" unique_id=9782443]
+custom_minimum_size = Vector2(0, 390)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChangePassMargin" type="MarginContainer" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel" unique_id=512551657]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 16
+
+[node name="ChangePassVBox" type="VBoxContainer" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin" unique_id=1192949401]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ChangePassTitle" type="Label" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox" unique_id=815588399]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 22
+text = "Change Password?
+"
+
+[node name="CurPassRow" type="HBoxContainer" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox" unique_id=1004843680]
+layout_mode = 2
+
+[node name="CurrentPassInput" type="LineEdit" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox/CurPassRow" unique_id=329229008]
+custom_minimum_size = Vector2(400, 28)
+layout_mode = 2
+placeholder_text = "Current Password"
+secret = true
+
+[node name="CurEyeButton" type="Button" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox/CurPassRow" unique_id=1499788667]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+text = "👁"
+
+[node name="NewPassRow" type="HBoxContainer" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox" unique_id=981352371]
+layout_mode = 2
+
+[node name="NewPassInput" type="LineEdit" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox/NewPassRow" unique_id=357944215]
+custom_minimum_size = Vector2(400, 28)
+layout_mode = 2
+placeholder_text = "New Password"
+secret = true
+
+[node name="NewEyeButton" type="Button" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox/NewPassRow" unique_id=2049925994]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+text = "👁"
+
+[node name="ConEyeRow" type="HBoxContainer" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox" unique_id=1223501192]
+layout_mode = 2
+
+[node name="CPPassInput" type="LineEdit" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox/ConEyeRow" unique_id=1104318774]
+custom_minimum_size = Vector2(400, 28)
+layout_mode = 2
+placeholder_text = "Confirm Password"
+secret = true
+
+[node name="CPEyeButton" type="Button" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox/ConEyeRow" unique_id=1033847842]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+text = "👁"
+
+[node name="PasswordSpacer" type="Control" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox" unique_id=1791264660]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="UpdatePassButton" type="Button" parent="ScrollContainer/CenterContainer/ContentVBox/ChangePassPanel/ChangePassMargin/ChangePassVBox" unique_id=1996341108]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Update Button
+"
+
+[node name="BackButton" type="Button" parent="." unique_id=1466772600]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 134.0
+offset_bottom = 68.0
+text = "← Back
+"
+
+[node name="PWConfirmationDialog" type="ConfirmationDialog" parent="." unique_id=1340243805]
+title = "Please Confirm"
+dialog_text = "Are you sure you want to update your password?"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

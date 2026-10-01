@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://b2rqor31w3x7y"]
+
+[ext_resource type="Shader" uid="uid://s4cjd1r6i20s" path="res://scenes/menus/main_menu/Scroll.gdshader" id="2_sleea"]
+[ext_resource type="Texture2D" uid="uid://6m6kascucx0v" path="res://Images/Checkered bg.png" id="3_g3faa"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="4_yb3pt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fmabn"]
+shader = ExtResource("2_sleea")
+shader_parameter/speed = 0.05
+
+[node name="HomePage" type="Control" unique_id=382354868]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="." unique_id=220430573]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fmabn")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -373.0
+offset_top = -819.0
+offset_right = 438.0
+offset_bottom = 814.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_g3faa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=46933245]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -258.0
+offset_top = -185.0
+offset_right = 375.0
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1860726205]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=967064054]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=773414475]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 150
+text = "AutoSim3D "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtonsMargin" type="MarginContainer" parent="MarginContainer" unique_id=2007859351]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 136
+theme_override_constants/margin_bottom = 8
+
+[node name="MenuButtonsContainer" type="Control" parent="MarginContainer/MenuButtonsMargin" unique_id=1432074624]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="MenuButtonsBoxContainer" type="BoxContainer" parent="MarginContainer/MenuButtonsMargin/MenuButtonsContainer" unique_id=250374176]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -291.5
+offset_right = 733.0
+offset_bottom = 291.5
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 15
+alignment = 1
+vertical = true
+script = ExtResource("4_yb3pt")
+lock = true
+
+[node name="ExploreButton" type="Button" parent="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1944989171]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 180)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Explore"
+
+[node name="Assembly" type="Button" parent="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=756222623]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 180)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Asembly"
+
+[node name="Quiz" type="Button" parent="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1986693072]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 180)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Quiz"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MenuButtonsMargin/MenuButtonsContainer" unique_id=1017302183]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -430.0
+offset_top = -114.0
+offset_bottom = -47.0
+grow_horizontal = 0
+
+[node name="MenuButtonsBoxContainer" type="BoxContainer" parent="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer" unique_id=130035331]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+alignment = 1
+script = ExtResource("4_yb3pt")
+lock = true
+
+[node name="Credits" type="Button" parent="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/MenuButtonsBoxContainer" unique_id=2122565851]
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Credits"
+
+[node name="Profile" type="Button" parent="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/MenuButtonsBoxContainer" unique_id=1701996680]
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Profile"
+
+[node name="FAQ" type="Button" parent="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/MenuButtonsBoxContainer" unique_id=1930014151]
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "FAQ"
+
+[node name="Option" type="Button" parent="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/MenuButtonsBoxContainer" unique_id=1686687225]
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Option"
+
+[connection signal="pressed" from="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/ExploreButton" to="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" method="_on_explore_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/Assembly" to="." method="_on_assembly_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/Quiz" to="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" method="_on_quiz_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/MenuButtonsBoxContainer/Credits" to="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" method="_on_credits_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/MenuButtonsBoxContainer/Profile" to="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" method="_on_profile_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/HBoxContainer/MenuButtonsBoxContainer/Option" to="MarginContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" method="_on_option_pressed"]
