@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://cwmwhfrwraq8e"]
+
+[ext_resource type="PackedScene" uid="uid://dnj5f0hsg4d52" path="res://ToyotaPointer/Scenes/Core Scene/toyota_7k.tscn" id="1_udbpo"]
+[ext_resource type="Script" uid="uid://ru3ypmn1uns" path="res://ToyotaPointer/Scripts/ViewerController.gd" id="2_jab4h"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_vx8by"]
+
+[sub_resource type="Sky" id="Sky_4davu"]
+sky_material = SubResource("PhysicalSkyMaterial_vx8by")
+
+[sub_resource type="Environment" id="Environment_nwehu"]
+background_mode = 2
+sky = SubResource("Sky_4davu")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nwehu"]
+size = Vector2(100, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wt0hp"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="LearningScene" type="Node3D" unique_id=227219185]
+metadata/_edit_group_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=9585534]
+environment = SubResource("Environment_nwehu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=924085148]
+transform = Transform3D(0.70710677, -0.5, 0.5, 0, 0.70710677, 0.70710677, -0.70710677, -0.5, 0.5, -1.4240446, 5.1548085, 5.9382806)
+light_energy = 16.0
+shadow_enabled = true
+shadow_opacity = 0.45
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=156273148]
+
+[node name="Button" type="Button" parent="UI" unique_id=1053312910]
+offset_left = 40.0
+offset_top = 38.0
+offset_right = 218.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="Label" type="Label" parent="UI" unique_id=34223867]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -265.0
+offset_top = 26.0
+offset_right = -34.0
+offset_bottom = 101.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 50
+text = "Toyota 7K"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=96650448]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 0.8, 3.5)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=921551682]
+target_position = Vector3(0, 20, -100)
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=107950323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.121388, 0, 0)
+visible = false
+
+[node name="CameraPivot" type="Node3D" parent="CameraRig" unique_id=1094291900]
+
+[node name="EngineRoot" type="Node3D" parent="." unique_id=755265518]
+
+[node name="Toyota7K" parent="EngineRoot" unique_id=977308624 instance=ExtResource("1_udbpo")]
+
+[node name="Managers" type="Node" parent="." unique_id=1474976942]
+
+[node name="ViewerController" type="Node3D" parent="." unique_id=1092888686 node_paths=PackedStringArray("engine_root", "camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.491823, 1.2257848, -2.1293602)
+script = ExtResource("2_jab4h")
+engine_root = NodePath("../EngineRoot")
+camera = NodePath("../Camera3D")
+min_zoom = null
+max_zoom = null
+min_scale = null
+max_scale = null
+one_finger_rotation_speed = null
+two_finger_rotation_speed = null
+pan_sensitivity = null
+
+[node name="floor" type="MeshInstance3D" parent="." unique_id=1622224749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+mesh = SubResource("PlaneMesh_nwehu")
+surface_material_override/0 = SubResource("StandardMaterial3D_wt0hp")
+
+[connection signal="pressed" from="UI/Button" to="ViewerController" method="_on_button_pressed"]
